@@ -3,7 +3,7 @@
 class CodigoFacilito extends CI_Controller {
     // Lo primero es definir el constructor de la clase
     function __construct(){
-        // Ejecutar el control de la clase padre CI_Controlles
+        // Ejecutar el constructor de la clase padre CI_Controlles
         parent::__construct();
         // Los helper se cargan despues de la ejecucion del constructor del padre
         // Al llamar el helper ya no se pone el _helper
@@ -18,8 +18,11 @@ class CodigoFacilito extends CI_Controller {
         $this->load->view('codigofacilito/bienvenido', $data);
     }
     function holaMundo () {
+        $this->load->library('menu', array('Otro', 'Menu', 'Desde otra', 'Funcion'));
+        $data['mi_menu'] = $this->menu->construirMenu();
+
         // Se pueden cargar multiples vistas
         $this->load->view('codigofacilito/headers');
-        $this->load->view('codigofacilito/bienvenido');
+        $this->load->view('codigofacilito/bienvenido', $data);
     }
 }

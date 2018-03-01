@@ -8,7 +8,7 @@
         public function construirMenu () {
             $ret_menu = "<nav><ul>";
             foreach($this->arr_menu as $opcion) {
-                $ret_menu .= "<li>.$opcion.</li>";
+                $ret_menu .= "<li>$opcion.</li>";
             }
             $ret_menu .= "</nav></ul>";
             return $ret_menu;

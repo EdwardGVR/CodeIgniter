@@ -1,6 +1,7 @@
 <body>
-    <h1>LLamado desde el controlador c&oacute;digo facilito.</h1>
+    <h1>LLamado desde el controlador.</h1>
     <?= getNombre() ?>
+    <?= getInfo() ?>
     <?= $mi_menu ?>
 </body>
 </html>
